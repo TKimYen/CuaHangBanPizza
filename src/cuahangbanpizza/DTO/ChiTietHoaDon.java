@@ -2,11 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package cuahangbanpizza;
+package cuahangbanpizza.DTO;
 
 //import java.io.DataOutputStream;
 //import java.io.FileOutputStream;
 //import java.io.IOException;
+import cuahangbanpizza.DanhSachSanPham;
+import cuahangbanpizza.DanhSachSanPham;
 import java.util.Scanner;
 
 /**

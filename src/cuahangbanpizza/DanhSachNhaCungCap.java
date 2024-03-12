@@ -5,6 +5,7 @@
  */
 package cuahangbanpizza;
 
+import cuahangbanpizza.DTO.NhaCungCap;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -16,7 +17,7 @@ import java.util.Scanner;
  * @author HP
  */
 
-public class DanhSachNhaCungCap implements ThaoTac {
+public class DanhSachNhaCungCap {
 	NhaCungCap[] ncc;
 	private int n;
 	Scanner sc = new Scanner(System.in);

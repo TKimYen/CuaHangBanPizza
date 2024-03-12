@@ -1,4 +1,7 @@
-package cuahangbanpizza;
+package cuahangbanpizza.DTO;
+
+import cuahangbanpizza.DTO.SanPham;
+import cuahangbanpizza.DanhSachSanPham;
 
 public class Nuoc extends SanPham {
         DanhSachSanPham dssp = new DanhSachSanPham();

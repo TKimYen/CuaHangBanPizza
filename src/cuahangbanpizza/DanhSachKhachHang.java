@@ -9,12 +9,13 @@ package cuahangbanpizza;
  *
  * @author HP
  */
+import cuahangbanpizza.DTO.KhachHang;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
 
 //implements ThaoTac
-public class DanhSachKhachHang implements ThaoTac  {
+public class DanhSachKhachHang {
 	KhachHang[] kh;
 	private int n;
 	Scanner sc = new Scanner(System.in);
@@ -77,7 +78,7 @@ public class DanhSachKhachHang implements ThaoTac  {
 	public String truyenDuLieu_KH_Ten(String makhachhang) {
 		for(int i = 0; i < n; i++) {
 			if(kh[i].getMakh().indexOf(makhachhang) != -1) {
-				return kh[i].ten;
+				return kh[i].getTen();
 			}
 		}
 		return null;
@@ -85,7 +86,7 @@ public class DanhSachKhachHang implements ThaoTac  {
         public String truyenDuLieu_KH_Ho(String makhachhang) {
 		for(int i = 0; i < n; i++) {
 			if(kh[i].getMakh().indexOf(makhachhang) != -1) {
-				return kh[i].ho;
+				return kh[i].getHo();
 			}
 		}
 		return null;
@@ -102,10 +103,10 @@ public class DanhSachKhachHang implements ThaoTac  {
 	//======TÌM KIẾM THEO HỌ VÀ TÊN LÓT, TÊN=======
 	public boolean timKiem_Ten(String ten) {
 		for(int i = 0; i < n; i++) {
-			if(kh[i].ten.indexOf(ten) != -1) {
+			if(kh[i].getTen().indexOf(ten) != -1) {
 				return true;
 			}
-			else if(kh[i].ten.indexOf(ten) != -1) {
+			else if(kh[i].getTen().indexOf(ten) != -1) {
 				return true;
 			}
 		}

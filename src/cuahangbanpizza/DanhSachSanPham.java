@@ -1,12 +1,15 @@
 package cuahangbanpizza;
 
+import cuahangbanpizza.DTO.Pizza;
+import cuahangbanpizza.DTO.Nuoc;
+import cuahangbanpizza.DTO.SanPham;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DanhSachSanPham implements ThaoTac  {
+public class DanhSachSanPham {
 	SanPham[] sp;
 	private int n;
 	Scanner sc = new Scanner(System.in);

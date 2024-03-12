@@ -5,6 +5,8 @@ package cuahangbanpizza;
  * and open the template in the editor.
  */
 
+import cuahangbanpizza.DTO.PhieuNhap;
+import cuahangbanpizza.DTO.NhanVien;
 import java.util.Scanner;
 import java.io.*;
 import java.text.ParseException;
@@ -16,7 +18,7 @@ import java.util.Date;
  *
  * @author HP
  */
-public class DanhSachPhieuNhap implements ThaoTac {
+public class DanhSachPhieuNhap {
     DanhSachNhanVien dsnv = new DanhSachNhanVien();
     DanhSachNhaCungCap dsncc = new DanhSachNhaCungCap();
     Scanner sc = new Scanner(System.in);

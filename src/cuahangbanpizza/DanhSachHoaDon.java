@@ -4,6 +4,7 @@
  */
 package cuahangbanpizza;
 
+import cuahangbanpizza.DTO.NhanVien;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,7 +21,7 @@ import java.util.Scanner;
  *
  * @author DELL
  */
-public class DanhSachHoaDon implements ThaoTac {
+public class DanhSachHoaDon {
     Scanner sc = new Scanner(System.in);
     SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     private HoaDon [] hd;

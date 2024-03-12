@@ -1,4 +1,4 @@
-package cuahangbanpizza;
+package cuahangbanpizza.DTO;
 
 import java.util.Scanner;
 

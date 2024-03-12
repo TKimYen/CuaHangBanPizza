@@ -9,12 +9,13 @@ package cuahangbanpizza;
  *
  * @author HP
  */
+import cuahangbanpizza.DTO.NhanVien;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
 import java.text.ParseException;
 
-public class DanhSachNhanVien implements ThaoTac  {
+public class DanhSachNhanVien {
 	NhanVien[] nv;
 	private int n;
 	Scanner sc = new Scanner(System.in);
@@ -75,7 +76,7 @@ public class DanhSachNhanVien implements ThaoTac  {
 	public String truyenDuLieu_NV_Ho(String manhanvien) {
 		for(int i = 0; i < n; i++) {
 			if(nv[i].getManv().equals(manhanvien)) {
-				return nv[i].ho;
+				return nv[i].getHo();
 			}
 		}
 		return null;
@@ -83,7 +84,7 @@ public class DanhSachNhanVien implements ThaoTac  {
         public String truyenDuLieu_NV_Ten(String manhanvien) {
 		for(int i = 0; i < n; i++) {
 			if(nv[i].getManv().equals(manhanvien)) {
-				return nv[i].ten;
+				return nv[i].getTen();
 			}
 		}
 		return null;
@@ -91,10 +92,10 @@ public class DanhSachNhanVien implements ThaoTac  {
 	//TÌM KIẾM THEO HỌ VÀ TÊN LÓT, 
 	public boolean timKiem_Ten(String name) {
 		for(int i = 0; i < n; i++) {
-			if(nv[i].ho.indexOf(name) != -1) {
+			if(nv[i].getHo().indexOf(name) != -1) {
 				return true;
 			}
-			else if(nv[i].ten.indexOf(name) != -1) {
+			else if(nv[i].getTen().indexOf(name) != -1) {
 				return true;
 			}
 		}
