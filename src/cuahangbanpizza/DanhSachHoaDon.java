@@ -4,6 +4,7 @@
  */
 package cuahangbanpizza;
 
+import cuahangbanpizza.DTO.HoaDon;
 import cuahangbanpizza.DTO.NhanVien;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

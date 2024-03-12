@@ -5,7 +5,6 @@ package cuahangbanpizza.DTO;
  * and open the template in the editor.
  */
 
-import cuahangbanpizza.ChiTietPhieuNhap;
 import cuahangbanpizza.DanhSachNhaCungCap;
 import cuahangbanpizza.DanhSachNhanVien;
 import cuahangbanpizza.DanhSachSanPham;

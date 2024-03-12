@@ -1,4 +1,4 @@
-package cuahangbanpizza;
+package cuahangbanpizza.DTO;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +8,7 @@ package cuahangbanpizza;
 
 //import java.io.DataOutputStream;
 //import java.io.IOException;
+import cuahangbanpizza.DanhSachSanPham;
 import java.util.Scanner;
 //import java.io.*;
 /**

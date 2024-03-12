@@ -5,6 +5,7 @@ package cuahangbanpizza;
  * and open the template in the editor.
  */
 
+import cuahangbanpizza.DTO.ChiTietPhieuNhap;
 import cuahangbanpizza.DTO.PhieuNhap;
 import cuahangbanpizza.DTO.NhanVien;
 import java.util.Scanner;
