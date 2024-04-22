@@ -1,41 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cuahangbanpizza.BUS;
 
-import MyCustom.MyDialog;
 import cuahangbanpizza.DAO.TaiKhoanDAO;
+import cuahangbanpizza.DTO.TaiKhoan;
+import MyCustom.MyDialog;
 
-/**
- *
- * @author DELL
- */
 public class TaiKhoanBUS {
-    private TaiKhoanDAO tkDAO;
-    
-    public TaiKhoanBUS(){
-        tkDAO = new TaiKhoanDAO();
-    }
-    
+
+    private TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
+
     public String getTenDangNhapTheoMa(String ma) {
-        return tkDAO.getTenDangNhapTheoMa(ma);
+        int maNV = Integer.parseInt(ma);
+        return taiKhoanDAO.getTenDangNhapTheoMa(maNV);
     }
-    
-    public void datLaiMatKhau(String maNV, String tenDangNhap) {
-        boolean flag = tkDAO.datLaiMatKhau(maNV, tenDangNhap);
+
+    public String getQuyenTheoMa(String ma) {
+        int maNV = Integer.parseInt(ma);
+        return taiKhoanDAO.getQuyenTheoMa(maNV);
+    }
+
+    public void datLaiMatKhau(String ma, String tenDangNhap) {
+        int maNV = Integer.parseInt(ma);
+        boolean flag = taiKhoanDAO.datLaiMatKhau(maNV, tenDangNhap);
         if (flag) {
             new MyDialog("Đặt lại thành công! Mật khẩu mới là: " + tenDangNhap, MyDialog.SUCCESS_DIALOG);
         } else {
             new MyDialog("Đặt lại thất bại!", MyDialog.ERROR_DIALOG);
         }
     }
-    
-    public boolean kiemTraTrungTenDangNhap(String tenDangNhap) {
-        return tkDAO.kiemTraTrungTenDangNhap(tenDangNhap);
+
+    public void datLaiQuyen(String ma, String quyen) {
+        int maNV = Integer.parseInt(ma);
+        boolean flag = taiKhoanDAO.datLaiQuyen(maNV, quyen);
+        if (flag) {
+            new MyDialog("Đặt lại thành công!", MyDialog.SUCCESS_DIALOG);
+        } else {
+            new MyDialog("Đặt lại thất bại!", MyDialog.ERROR_DIALOG);
+        }
     }
-    
-    public boolean themTaiKhoan(String maNV, String tenDangNhap, String quyen) {
+
+    public boolean kiemTraTrungTenDangNhap(String tenDangNhap) {
+        return taiKhoanDAO.kiemTraTrungTenDangNhap(tenDangNhap);
+    }
+
+    public boolean themTaiKhoan(String ma, String tenDangNhap, String quyen) {
+        int maNV = Integer.parseInt(ma);
         if (tenDangNhap.trim().equals("")) {
             new MyDialog("Không được để trống Tên đăng nhập!", MyDialog.ERROR_DIALOG);
             return false;
@@ -43,12 +51,12 @@ public class TaiKhoanBUS {
         if (kiemTraTrungTenDangNhap(tenDangNhap)) {
             MyDialog dlg = new MyDialog("Tên đăng nhập bị trùng! Có thể tài khoản bị khoá, thực hiện mở khoá?", MyDialog.WARNING_DIALOG);
             if (dlg.getAction() == MyDialog.OK_OPTION) {
-                moKhoaTaiKhoan(maNV);
+                moKhoaTaiKhoan(ma);
                 return true;
             }
             return false;
         }
-        boolean flag = tkDAO.themTaiKhoan(maNV, tenDangNhap, quyen);
+        boolean flag = taiKhoanDAO.themTaiKhoan(maNV, tenDangNhap, quyen);
         if (flag) {
             new MyDialog("Cấp tài khoản thành công! Mật khẩu là " + tenDangNhap, MyDialog.SUCCESS_DIALOG);
         } else {
@@ -56,9 +64,10 @@ public class TaiKhoanBUS {
         }
         return flag;
     }
-    
-    public void khoaTaiKhoan(String maNV) {
-        boolean flag = tkDAO.khoaTaiKhoan(maNV);
+
+    public void khoaTaiKhoan(String ma) {
+        int maNV = Integer.parseInt(ma);
+        boolean flag = taiKhoanDAO.khoaTaiKhoan(maNV);
         if (flag) {
             new MyDialog("Khoá tài khoản thành công!", MyDialog.SUCCESS_DIALOG);
         } else {
@@ -66,8 +75,9 @@ public class TaiKhoanBUS {
         }
     }
 
-    public void moKhoaTaiKhoan(String maNV) {
-        boolean flag = tkDAO.moKhoaTaiKhoan(maNV);
+    public void moKhoaTaiKhoan(String ma) {
+        int maNV = Integer.parseInt(ma);
+        boolean flag = taiKhoanDAO.moKhoaTaiKhoan(maNV);
         if (flag) {
             new MyDialog("Mở khoá tài khoản thành công!", MyDialog.SUCCESS_DIALOG);
         } else {
@@ -75,12 +85,12 @@ public class TaiKhoanBUS {
         }
     }
 
-    public boolean doiMatKhau(String maNV, String matKhauCu, String matKhauMoi, String nhapLaiMatKhau) {
+    public boolean doiMatKhau(String matKhauCu, String matKhauMoi, String nhapLaiMatKhau) {
         if(!matKhauMoi.equals(nhapLaiMatKhau)) {
             new MyDialog("Mật khẩu mới không khớp!", MyDialog.ERROR_DIALOG);
             return false;
         }
-        boolean flag = tkDAO.doiMatKhau(maNV, matKhauCu, matKhauMoi);
+        boolean flag = taiKhoanDAO.doiMatKhau(matKhauCu, matKhauMoi);
         if (flag) {
             new MyDialog("Đổi thành công!", MyDialog.SUCCESS_DIALOG);
         } else {
@@ -88,4 +98,10 @@ public class TaiKhoanBUS {
         }
         return flag;
     }
+    
+    public int getTrangThai(String maNV) {
+        int ma = Integer.parseInt(maNV);
+        return taiKhoanDAO.getTrangThai(ma);
+    }
+
 }

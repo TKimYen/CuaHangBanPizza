@@ -6,26 +6,26 @@ package cuahangbanpizza.DTO;
 
 public class TaiKhoan {
 
-    private String maNhanVien;
+    private int maNhanVien;
     private String tenDangNhap;
     private String matKhau;
-    private String quyen;
+    private int quyen;
 
     public TaiKhoan() {
     }
 
-    public TaiKhoan(String maNhanVien, String tenDangNhap, String matKhau, String quyen) {
+    public TaiKhoan(int maNhanVien, String tenDangNhap, String matKhau, int quyen) {
         this.maNhanVien = maNhanVien;
         this.tenDangNhap = tenDangNhap;
         this.matKhau = matKhau;
         this.quyen = quyen;
     }
 
-    public String getMaNhanVien() {
+    public int getMaNhanVien() {
         return maNhanVien;
     }
 
-    public void setMaNhanVien(String maNhanVien) {
+    public void setMaNhanVien(int maNhanVien) {
         this.maNhanVien = maNhanVien;
     }
 
@@ -45,11 +45,11 @@ public class TaiKhoan {
         this.matKhau = matKhau;
     }
 
-    public String getQuyen() {
+    public int getQuyen() {
         return quyen;
     }
 
-    public void setQuyen(String quyen) {
+    public void setQuyen(int quyen) {
         this.quyen = quyen;
     }
 }
