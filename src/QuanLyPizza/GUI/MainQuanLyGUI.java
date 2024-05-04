@@ -13,10 +13,8 @@ public class MainQuanLyGUI extends JFrame {
 
     public MainQuanLyGUI() {
         this.setTitle("Phần mềm quản lý cửa hàng pizza");
-//        this.setSize(1280, 900);
-        this.setMinimumSize(new Dimension(1280, 800)); // Set minimum size
-//        this.setMaximumSize(new Dimension(1280, 800)); // Set maximum size
-        Image icon = Toolkit.getDefaultToolkit().getImage("image/ManagerUI/icon-app.png");
+        this.setSize(1280, 800);
+        Image icon = Toolkit.getDefaultToolkit().getImage("image/ManagerUI/pizza-iconapp.png");
         this.setIconImage(icon);
         addControls();
         addEvents();
@@ -30,16 +28,15 @@ public class MainQuanLyGUI extends JFrame {
     }
 
     JLabel btnDoiMatKhau;
-    JPanel pnTitle, pnMenuLeft, pnCard, pnBanHang, pnKhuyenMai, pnNhapHang, pnSanPham, pnNhanVien, pnKhachHang, pnThongKe;
+    JPanel pnTitle, pnMenuLeft, pnCard, pnBanHang, pnKhuyenMai, pnNhapHang, pnSanPham, pnNhanVien, pnKhachHang;
     PnQuanLyBanHangGUI banHangPanel;
     PnQuanLyKhuyenMaiGUI khuyenMaiPanel;
     PnQuanLyNhapHangGUI nhapHangPanel;
     PnQuanLySanPhamGUI sanPhamPanel;
     PnQuanLyNhanVienGUI nhanVienPanel;
     PnQuanLyKhachHangGUI khachHangPanel;
-    PnQuanLyThongKeGUI thongKePanel;
 
-    JLabel btnClose, btnMinimize, lblBanHang, lblKhuyenMai, lblNhapHang, lblSanPham, lblNhanVien, lblKhachHang, lblThongKe;
+    JLabel btnClose, btnMinimize, lblBanHang, lblKhuyenMai, lblNhapHang, lblSanPham, lblNhanVien, lblKhachHang;
     final Color clLeftItem = new Color(242, 153, 74);
     final Color clLeftItemHover = new Color(142,53,11);
     final Color clLeftItemSelected = new Color(72, 88, 107);
@@ -105,7 +102,6 @@ public class MainQuanLyGUI extends JFrame {
         lblSanPham = new JLabel(new ImageIcon("image/ManagerUI/lblSanPham.png"));
         lblNhanVien = new JLabel(new ImageIcon("image/ManagerUI/lblNhanVien.png"));
         lblKhachHang = new JLabel(new ImageIcon("image/ManagerUI/lblKhachHang.png"));
-        lblThongKe = new JLabel(new ImageIcon("image/ManagerUI/lblThongKe.png"));
 
         listMenuLeft = new ArrayList<>();
         listMenuLeft.add(lblBanHang);
@@ -114,7 +110,6 @@ public class MainQuanLyGUI extends JFrame {
         listMenuLeft.add(lblNhanVien);
         listMenuLeft.add(lblKhachHang);
         listMenuLeft.add(lblNhapHang);
-        listMenuLeft.add(lblThongKe);
 
         for (JLabel lbl : listMenuLeft) {
             lbl.setVisible(false);
@@ -144,7 +139,6 @@ public class MainQuanLyGUI extends JFrame {
         pnSanPham = new JPanel();
         pnNhanVien = new JPanel();
         pnKhachHang = new JPanel();
-        pnThongKe = new JPanel();
 
         pnCard.add(pnBanHang, "1");
         pnCard.add(pnKhuyenMai, "2");
@@ -152,7 +146,6 @@ public class MainQuanLyGUI extends JFrame {
         pnCard.add(pnSanPham, "4");
         pnCard.add(pnNhanVien, "5");
         pnCard.add(pnKhachHang, "6");
-        pnCard.add(pnThongKe, "7");
 
         //==========ADD PANEL BÁN HÀNG + KHUYẾN MÃI (Ko phân quyền)==========
         banHangPanel = new PnQuanLyBanHangGUI();
@@ -194,12 +187,6 @@ public class MainQuanLyGUI extends JFrame {
             lblKhachHang.setVisible(true);
         }
 
-//        if (quyen.getThongKe() == 1) {
-//            thongKePanel = new PnQuanLyThongKeGUI();
-//            pnThongKe.setLayout(new BorderLayout());
-//            pnThongKe.add(thongKePanel, BorderLayout.CENTER);
-//            lblThongKe.setVisible(true);
-//        }
         pnMain.add(pnCard);
         /*
         ============================================================
