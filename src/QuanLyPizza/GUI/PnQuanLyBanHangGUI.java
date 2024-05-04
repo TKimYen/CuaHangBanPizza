@@ -454,7 +454,7 @@ public class PnQuanLyBanHangGUI extends JPanel {
         pnGhiChu.add(txtGhiChu);
         pnCTHoaDonLeft.add(pnGhiChu);
 
-        JPanel pnSearchPrice = new TransparentPanel(new FlowLayout());
+        JPanel pnSearchPrice = new TransparentPanel(new FlowLayout(FlowLayout.LEFT, 2,0));
         lblMinsearch.setFont(font);
         lblMaxSearch.setFont(font);
         txtMinSearch.setFont(font);
@@ -465,7 +465,7 @@ public class PnQuanLyBanHangGUI extends JPanel {
         pnSearchPrice.add(txtMaxSearch);
         pnCTHoaDonLeft.add(pnSearchPrice);
 
-        JPanel pnSearchDate = new TransparentPanel(new FlowLayout());
+        JPanel pnSearchDate = new TransparentPanel(new FlowLayout(FlowLayout.LEFT, 2,0));
         lblMinNgay.setFont(font);
         lblMaxNgay.setFont(font);
         txtMinNgayLap.setFont(font);
@@ -495,14 +495,11 @@ public class PnQuanLyBanHangGUI extends JPanel {
         JPanel pnListHoaDon = new TransparentPanel();
         listHoaDon = new JList<>();
         listHoaDon.setFont(font);
-        listHoaDon.setPreferredSize(new Dimension(
-                (int) pnCTHoaDonLeft.getPreferredSize().getWidth() - 22,
-                400));
+        listHoaDon.setPrototypeCellValue("000 | dddd-mm-dd === 000,000,000 VND"); 
         loadDataListHoaDon();
         JScrollPane scrHoaDon = new JScrollPane(listHoaDon,
                 JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
-                JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scrHoaDon.setPreferredSize(listHoaDon.getPreferredSize());
+                JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         pnListHoaDon.add(scrHoaDon);
         pnCTHoaDonLeft.add(pnListHoaDon);
 
