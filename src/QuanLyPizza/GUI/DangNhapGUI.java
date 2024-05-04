@@ -1,6 +1,5 @@
 package QuanLyPizza.GUI;
 
-import Main.Main;
 import MyCustom.ImagePanel;
 import MyCustom.MyDialog;
 import QuanLyPizza.BUS.DangNhapBUS;
@@ -82,15 +81,13 @@ public class DangNhapGUI extends JFrame {
         txtPassword.setHorizontalAlignment(JTextField.LEFT);
         txtPassword.setBounds(36, 401, 370, 50);
 
-        Main.changLNF("Windows");
         ckbRemember = new JCheckBox("Ghi nhớ đăng nhập");
         ckbRemember.setFont(fontTXT);
         ckbRemember.setOpaque(false);
         ckbRemember.setForeground(Color.black);
         ckbRemember.setBounds(28, 464, 290, 19);
         ckbRemember.setFocusPainted(false);
-        Main.changLNF("Nimbus");
-
+        
         pnMain.add(btnExit);
         pnMain.add(txtUser);
         pnMain.add(txtPassword);
