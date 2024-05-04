@@ -12,8 +12,6 @@ import QuanLyPizza.BUS.CTHoaDonBUS;
 import QuanLyPizza.BUS.DangNhapBUS;
 import QuanLyPizza.BUS.SanPhamBUS;
 
-import static Main.Main.changLNF;
-
 import MyCustom.MyDialog;
 import MyCustom.MyTable;
 import MyCustom.TransparentPanel;
@@ -57,7 +55,6 @@ public class PnQuanLyBanHangGUI extends JPanel {
     JButton btnReset, btnResetCTHoaDon, btnResetHoaDon;
 
     public PnQuanLyBanHangGUI() {
-        changLNF("Windows");
         addControlsBanHang();
         addEventsBanHang();
     }
