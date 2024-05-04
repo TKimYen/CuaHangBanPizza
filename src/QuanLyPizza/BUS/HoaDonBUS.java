@@ -61,7 +61,7 @@ public class HoaDonBUS {
 
     public ArrayList<HoaDon> getListHoaDonTheoNgay(String min, String max) {
         try {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
             Date minDate = sdf.parse(min);
             Date maxDate = sdf.parse(max);
 
