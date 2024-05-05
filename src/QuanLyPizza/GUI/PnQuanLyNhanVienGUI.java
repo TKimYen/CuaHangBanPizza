@@ -4,7 +4,6 @@ import MyCustom.MyDialog;
 import MyCustom.TransparentPanel;
 import MyCustom.MyTable;
 import MyCustom.ImagePanel;
-import static Main.Main.changLNF;
 
 import QuanLyPizza.BUS.NhanVienBUS;
 import QuanLyPizza.BUS.PhanQuyenBUS;
@@ -30,7 +29,6 @@ import javax.swing.table.DefaultTableModel;
 public class PnQuanLyNhanVienGUI extends JPanel {
 
     public PnQuanLyNhanVienGUI() {
-        changLNF("Windows");
         addControlsNhanVien();
         addEventsNhanVien();
         addEventsPhanQuyen();
