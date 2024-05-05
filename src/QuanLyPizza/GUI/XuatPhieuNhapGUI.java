@@ -21,7 +21,6 @@ public class XuatPhieuNhapGUI extends javax.swing.JDialog {
     String nhanVien;
 
     public XuatPhieuNhapGUI(String nhaCungCap, String nhanVien, ArrayList<CTPhieuNhap> listCTPhieuNhap) {
-        Main.Main.changLNF("Windows");
         checkNhap = false;
 
         this.nhaCungCap = nhaCungCap;
