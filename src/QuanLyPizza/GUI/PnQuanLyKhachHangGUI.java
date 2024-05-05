@@ -20,12 +20,9 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Vector;
 
-import static Main.Main.changLNF;
-
 public class PnQuanLyKhachHangGUI extends JPanel {
 
     public PnQuanLyKhachHangGUI() {
-        changLNF("Windows");
         addControls();
         addEvents();
     }
