@@ -5,8 +5,6 @@ import QuanLyPizza.BUS.SanPhamBUS;
 import QuanLyPizza.DTO.LoaiSP;
 import QuanLyPizza.DTO.SanPham;
 
-import static Main.Main.changLNF;
-
 import MyCustom.MyDialog;
 import MyCustom.MyFileChooser;
 import MyCustom.MyTable;
@@ -42,7 +40,6 @@ import javax.swing.table.TableColumnModel;
 public class PnQuanLySanPhamGUI extends JPanel {
 
     public PnQuanLySanPhamGUI() {
-        changLNF("Windows");
         addControlsSanPham();
         addEventsSanPham();
     }
