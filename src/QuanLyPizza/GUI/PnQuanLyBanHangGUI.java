@@ -370,6 +370,7 @@ public class PnQuanLyBanHangGUI extends JPanel {
                                     PANEL CT HOÁ ĐƠN
         =========================================================================
          */
+//      ===============================pnCTHoaDonLeft============================
         JPanel pnCTHoaDon = new JPanel();
         pnCTHoaDon.setLayout(new BorderLayout());
 
@@ -391,6 +392,10 @@ public class PnQuanLyBanHangGUI extends JPanel {
         lblMaxSearch = new JLabel("đến:");
         lblMinNgay = new JLabel("Ngày lập từ:");
         lblMaxNgay = new JLabel("đến:");
+        
+        int width = 100; // Độ rộng cho các label
+        int height = 30; // Độ cao cho các label
+        Dimension fixedSize = new Dimension(width, height);
 
         txtMaHD = new JTextField(10);
         txtMaKH = new JTextField(10);
@@ -476,14 +481,13 @@ public class PnQuanLyBanHangGUI extends JPanel {
         pnSearchDate.add(txtMaxNgayLap);
         pnCTHoaDonLeft.add(pnSearchDate);
 
-        Dimension lblHoaDonSize = lblTongTien.getPreferredSize();
-        lblMaHD.setPreferredSize(lblHoaDonSize);
-        lblNgayLap.setPreferredSize(lblHoaDonSize);
-        lblMaKH.setPreferredSize(lblHoaDonSize);
-        lblMaNV.setPreferredSize(lblHoaDonSize);
-        lblTongTien.setPreferredSize(lblHoaDonSize);
-        lblGhiChu.setPreferredSize(lblHoaDonSize);
-        lblMinsearch.setPreferredSize(lblMinNgay.getPreferredSize());
+        lblMaHD.setPreferredSize(fixedSize);
+        lblNgayLap.setPreferredSize(fixedSize);
+        lblMaKH.setPreferredSize(fixedSize);
+        lblMaNV.setPreferredSize(fixedSize);
+        lblTongTien.setPreferredSize(fixedSize);
+        lblGhiChu.setPreferredSize(fixedSize);
+        lblMinsearch.setPreferredSize(fixedSize);
 
         txtMaHD.setEditable(false);
         txtMaKH.setEditable(false);
@@ -503,7 +507,7 @@ public class PnQuanLyBanHangGUI extends JPanel {
         pnListHoaDon.add(scrHoaDon);
         pnCTHoaDonLeft.add(pnListHoaDon);
 
-        //=======================================================
+//      ======================pnCTHoaDonRight====================================
         JPanel pnCTHoaDonRight = new TransparentPanel();
         pnCTHoaDonRight.setLayout(new BorderLayout());
 
@@ -567,12 +571,11 @@ public class PnQuanLyBanHangGUI extends JPanel {
         pnThanhTienCT.add(txtThanhTienCT);
         pnTopCTHoaDonRight.add(pnThanhTienCT);
 
-        Dimension lblCTHDSize = lblThanhTienCT.getPreferredSize();
-        lblMaHDCT.setPreferredSize(lblCTHDSize);
-        lblMaSPCT.setPreferredSize(lblCTHDSize);
-        lblSoLuongCT.setPreferredSize(lblCTHDSize);
-        lblDonGiaCT.setPreferredSize(lblCTHDSize);
-        lblThanhTienCT.setPreferredSize(lblCTHDSize);
+        lblMaHDCT.setPreferredSize(fixedSize);
+        lblMaSPCT.setPreferredSize(fixedSize);
+        lblSoLuongCT.setPreferredSize(fixedSize);
+        lblDonGiaCT.setPreferredSize(fixedSize);
+        lblThanhTienCT.setPreferredSize(fixedSize);
         txtMaHDCT.setEditable(false);
         txtMaSPCT.setEditable(false);
         txtSoLuongCT.setEditable(false);
@@ -597,7 +600,6 @@ public class PnQuanLyBanHangGUI extends JPanel {
         //==========
         pnCardTabBanHang.add(pnCTHoaDon, "2");
 
-        //=======================================================
         this.add(pnCardTabBanHang);
         loadDataTableSanPhamBan();
         txtTenSPBanHang.requestFocus();
